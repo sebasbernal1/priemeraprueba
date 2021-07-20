@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    position: fixed;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.logo, .inicio, .hoy, .navbar, .campanita, .mensaje, .cuenta, .flechita {
+    width: 100%;
+  }
+#logoinicio{
+    height: 25px;
+    width: 25px;
+}
+.inicio{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(45, 48, 52);
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+}
+.inicio:hover {
+    background: rgb(45, 48, 52);
+    color: whitesmoke;
+    border-radius: 12px;
+}
+.hoy{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(45, 48, 52);
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+}
+.hoy:hover{
+    background: rgb(45, 48, 52);
+    color: whitesmoke;
+    border-radius: 12px;
+}
+#input{
+    height: 30px;
+    width: 1000px;
+    border-radius: 12px;
+    background-color: rgb(228, 228, 228);
+    text-indent: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color:  rgb(45, 48, 52);
+    border: 0;
+    background-image:url(imagenes/lupa.png); 
+    background-size: 15px;
+    background-repeat: no-repeat; 
+    background-position: 12px 8px;
+}
+#logocampana{
+    height: 30px;
+    width: 30px;
+}
+#logomensaje{
+    height: 30px;
+    width: 30px;
+}
+#person{
+    height: 35px;
+    width: 35px; 
+}
+#flecha{
+    height: 25px;
+    width: 25px;
+}
+@media screen and (max-width:1000px){
+    .logo{
+        width: 5%;
+        -webkit-order: 1;
+        order: 1;
+    }
+    .inicio{
+        width: 5%;
+        -webkit-order: 2;
+        order: 2;
+    }
+    .hoy{
+        width: 5%;
+        -webkit-order: 3;
+        order: 3;
+    }
+    .navbar{
+        width: 65%;
+        -webkit-order: 4;
+        order: 4;
+    }
+    .campanita{
+        width: 5%;
+        -webkit-order: 5;
+        order: 5;
+    }
+    .mensaje{
+        width: 5%;
+        -webkit-order: 6;
+        order: 6;
+    }
+    .cuenta{
+        width: 5%;
+        -webkit-order: 7;
+        order: 7;
+    }
+    .flechita{
+        width: 5%;
+        -webkit-order: 8;
+        order: 8;
+    }
+}
+@media screen and (max-width:800px){
+    .logo{
+        width: 10%;
+        -webkit-order: 1;
+        order: 1;
+    }
+    .navbar{
+        width: 60%;
+        -webkit-order: 2;
+        order: 2;
+    }
+    .campanita{
+        width: 10%;
+        -webkit-order: 3;
+        order: 3;
+    }
+    .mensaje{
+        width: 10%;
+        -webkit-order: 4;
+        order: 4;
+    }
+    .cuenta{
+        width: 10%;
+        -webkit-order: 5;
+        order: 5;
+    }
+}
