@@ -1,30 +1,37 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-.container{
-    display: grid;
-    width: 100%;
-    height: 40px;
-    margin-top: 20px;
-    text-align: center;
-    padding: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+} */
+header{
     position: fixed;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
 }
-.logo, .inicio, .hoy, .navbar, .campanita, .mensaje, .cuenta, .flechita {
-    width: 100%;
-  }
+header ul{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    padding: 5px;
+    list-style-type: none;
+}
+header ul > li {
+    display: grid;
+    padding: 5px;
+}  
+header a > i {
+    margin-right: 5px;
+}
 #logoinicio{
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
 }
 .inicio{
+    display: grid;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -38,6 +45,7 @@
     border-radius: 12px;
 }
 .hoy{
+    display: grid;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -81,72 +89,130 @@
     height: 25px;
     width: 25px;
 }
-@media screen and (max-width:1000px){
-    .logo{
-        width: 5%;
-        -webkit-order: 1;
-        order: 1;
-    }
-    .inicio{
-        width: 5%;
-        -webkit-order: 2;
-        order: 2;
-    }
-    .hoy{
-        width: 5%;
-        -webkit-order: 3;
-        order: 3;
-    }
-    .navbar{
-        width: 65%;
-        -webkit-order: 4;
-        order: 4;
-    }
-    .campanita{
-        width: 5%;
-        -webkit-order: 5;
-        order: 5;
-    }
-    .mensaje{
-        width: 5%;
-        -webkit-order: 6;
-        order: 6;
-    }
-    .cuenta{
-        width: 5%;
-        -webkit-order: 7;
-        order: 7;
-    }
-    .flechita{
-        width: 5%;
-        -webkit-order: 8;
-        order: 8;
+@media only screen and (max-width: 1200px){
+    #input{
+        height: 30px;
+        width: 700px;
+        border-radius: 12px;
+        background-color: rgb(228, 228, 228);
+        text-indent: 35px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 14px;
+        color:  rgb(45, 48, 52);
+        border: 0;
+        background-image:url(imagenes/lupa.png); 
+        background-size: 15px;
+        background-repeat: no-repeat; 
+        background-position: 12px 8px;
     }
 }
-@media screen and (max-width:800px){
-    .logo{
-        width: 10%;
-        -webkit-order: 1;
-        order: 1;
+@media only screen and (max-width: 1030px){
+    #input{
+        height: 30px;
+        width: 600px;
+        border-radius: 12px;
+        background-color: rgb(228, 228, 228);
+        text-indent: 35px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 14px;
+        color:  rgb(45, 48, 52);
+        border: 0;
+        background-image:url(imagenes/lupa.png); 
+        background-size: 15px;
+        background-repeat: no-repeat; 
+        background-position: 12px 8px;
     }
-    .navbar{
-        width: 60%;
-        -webkit-order: 2;
-        order: 2;
+    .inicio{
+        display: grid;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(45, 48, 52);
+        text-decoration: none;
+        padding: 5px 3px 5px 3px;
     }
-    .campanita{
-        width: 10%;
-        -webkit-order: 3;
-        order: 3;
+    .hoy{
+        display: grid;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(45, 48, 52);
+        text-decoration: none;
+        padding: 5px 3px 5px 3px;
     }
-    .mensaje{
-        width: 10%;
-        -webkit-order: 4;
-        order: 4;
+}
+@media only screen and (max-width: 700px){
+    #input{
+        height: 30px;
+        width: 250px;
+        border-radius: 12px;
+        background-color: rgb(228, 228, 228);
+        text-indent: 35px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 14px;
+        color:  rgb(45, 48, 52);
+        border: 0;
+        background-image:url(imagenes/lupa.png); 
+        background-size: 15px;
+        background-repeat: no-repeat; 
+        background-position: 12px 8px;
     }
-    .cuenta{
-        width: 10%;
-        -webkit-order: 5;
-        order: 5;
+}
+@media only screen and (max-width: 450px){
+    #input{
+        height: 30px;
+        width: 50px;
+        border-radius: 12px;
+        background-color: rgb(228, 228, 228);
+        text-indent: 35px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 14px;
+        color:  rgb(45, 48, 52);
+        border: 0;
+        background-image:url(imagenes/lupa.png); 
+        background-size: 15px;
+        background-repeat: no-repeat; 
+        background-position: 12px 8px;
+    }
+    .inicio{
+        display: grid;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(45, 48, 52);
+        text-decoration: none;
+        padding: 5px 0px 5px 0px;
+    }
+    .hoy{
+        display: none;
+        padding: 5px 0px 5px 0px;
+    }
+}
+@media only screen and (max-width: 300px){
+    #input{
+        height: 30px;
+        width: 50px;
+        border-radius: 12px;
+        background-color: rgb(228, 228, 228);
+        text-indent: 35px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 14px;
+        color:  rgb(45, 48, 52);
+        border: 0;
+        background-image:url(imagenes/lupa.png); 
+        background-size: 15px;
+        background-repeat: no-repeat; 
+        background-position: 12px 8px;
+    }
+    .inicio{
+        display: none;
+        padding: 5px 0px 5px 0px;
+    }
+    .hoy{
+        display: none;
+        padding: 5px 0px 5px 0px;
+    }
+    #person{
+        display:none;
     }
 }
